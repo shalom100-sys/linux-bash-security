@@ -1,0 +1,72 @@
+# Base-02 – Authentication Logic & Conditionals
+# Personal Notes
+
+## Goal
+Understanding basic authentication logic using conditionals.
+Learning how user input is handled and validated in Bash scripts.
+
+---
+
+## Variables
+USER_OK / PASS_OK
+Used to store the expected credentials.
+Separating configuration from logic improves readability and control.
+
+---
+
+## read
+Used to receive user input from stdin.
+
+read username
+Reads visible input.
+
+read -s password
+Reads input silently (used for passwords).
+
+---
+
+## if statement
+Used to evaluate conditions and control execution flow.
+
+#-Example:
+if [ "$username" = "$USER_OK" ]; then
+    ...
+fi
+
+---
+
+## Logical AND ( && )
+Used to ensure multiple conditions are true.
+
+Example:
+[ "$username" = "$USER_OK" ] && [ "$password" = "$PASS_OK" ]
+
+Both conditions must evaluate to true for successful authentication.
+
+---
+
+## exit
+Used to terminate script execution.
+
+exit 0
+Successful execution.
+
+exit 1
+Failure or invalid condition.
+
+---
+
+## Security Notes
+- Password input should never be echoed to the screen.
+- Hardcoded credentials are for learning purposes only.
+- Repeating authentication attempts without control is dangerous.
+- Automation and attempt limiting belong to the next stage.
+
+---
+
+## Summary
+#-This stage focuses on:
+- Conditional logic
+- Input validation
+- Basic authentication flow
+Without loops or automation.

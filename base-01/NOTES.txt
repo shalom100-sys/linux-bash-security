@@ -1,0 +1,31 @@
+# Base-01 – Personal Notes
+
+## pwd
+Used to identify my exact location in the filesyste and the path on it .
+Critical for orientation during system enumeration.
+
+## ls / ls -la
+Lists directory contents.
+Using `-a` reveals hidden files which may include sensitive configs.
+'-l' shows the permissions of the files excluding the hidden ones.
+and the combination between -l and a means la shows both the hidden files and all the permissions of all files including the hidden ones which may include sensitive configs.
+
+## cd
+Used to move through the filesystem hierarchy.
+Understanding relative vs absolute paths is essential.
+
+## touch
+Creates empty files.
+Useful for staging, testing permissions, or script placeholders.
+
+## echo >>
+Used to append data to files.
+Demonstrates controlled file modification.
+
+## less vs cat
+`less` is preferred for large files and logs.
+Allows safe inspection without flooding the terminal.
+
+## chmod +x
+Transforms a text file into an executable.
+Marks the transition from data to tool.

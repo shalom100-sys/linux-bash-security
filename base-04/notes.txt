@@ -1,0 +1,77 @@
+## Base 04 – Internal Logic Notes
+
+### General Overview
+
+In this stage, the authentication process is controlled by a loop
+rather than manual repetition.
+
+The loop is not just a repetition mechanism.
+It acts as an attempt limiter and flow controller.
+
+The script is structured around three logical layers:
+
+1. Threshold Conditions (Entry Conditions)  
+2. Validation Functions  
+3. Control Loop
+
+This separation creates clarity, control, and security-oriented logic.
+
+---
+
+## Control Flow Explanation
+
+The loop enforces system policy:
+- How many attempts are allowed
+- When execution should continue
+- When access should be granted
+- When access should be blocked
+
+Validation logic is isolated into functions.
+These functions do not print output or make decisions.
+They only return logical results.
+
+The main control flow evaluates these results
+and applies system-level decisions accordingly.
+
+This structure mirrors real authentication systems
+and prepares for lower-level programming languages such as C.
+
+---
+
+## Commands Used in This Module
+
+### while
+Used to implement the attempt-limiting loop.
+Controls how many authentication attempts are allowed before blocking access.
+
+### return
+Used inside validation functions.
+Returns a logical status:
+- `0` for success
+- `1` for failure  
+Does not produce output.
+
+### exit
+Used by the main control flow.
+Terminates script execution after a final decision is made.
+
+### read / read -s
+Used to collect user input.
+The `-s` flag prevents password disclosure during input.
+
+### sleep
+Introduces a delay between failed attempts.
+Acts as a basic defense against rapid brute-force behavior
+and enforces controlled execution timing.
+
+---
+
+## Design Principles Learned
+
+- Functions report status, they do not decide
+- The loop enforces policy, not validation
+- The main flow acts as an entry gate to the system
+- Security logic is enforced automatically, not manually
+
+This approach improves readability, maintainability,
+and security awareness in scripting.

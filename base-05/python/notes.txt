@@ -1,0 +1,75 @@
+# Notes – Python Login System
+
+## Core Concepts
+
+### Input
+
+* `input()` collects user input from the terminal
+
+### Output
+
+* `print()` displays output to the user
+
+### Variables
+
+* Used to store data
+* Example: `username = "admin"`
+
+### Conditions
+
+* `if` checks a condition
+* `else` handles alternative cases
+* `==` compares values
+* `and` combines multiple conditions
+
+---
+
+## Functions
+
+```
+def login():
+```
+
+* Groups logic into a reusable block
+* Improves code organization
+
+Function execution:
+
+```
+login()
+```
+
+---
+
+## Program Flow
+
+1. Prompt user for username
+2. Prompt user for password
+3. Compare input with expected values
+4. Output result
+
+---
+
+## Security Insight
+
+Login systems are a primary attack surface.
+
+Common attack:
+
+* Brute force (repeated password attempts)
+
+Basic defense strategies:
+
+* Limit number of attempts
+* Add delay between attempts
+* Lock account after failures
+
+---
+
+## Next Topics
+
+* Loops (`while`)
+* Delays (`time.sleep`)
+* File handling
+* Password hashing
+* Basic attack simulation

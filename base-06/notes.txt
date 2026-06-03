@@ -1,0 +1,34 @@
+残留 📓 DEVELOPER NOTES & SCANF RULES 📓
+======================================================================
+
+[ Project: my_mini_projact (Interactive Version) ]
+[ Topic: Dynamic Input & Logic Validation ]
+
+1. THE GOLDEN RULES OF SCANF IN C:
+----------------------------------------------------------------------
+* The Ampersand (&) Rule:
+  - ALWAYS place an ampersand (&) before the variable name inside scanf. 
+  - This tells C the exact memory address where it should save the user's input.
+  -> WRONG: scanf("%d", input_password);
+  -> RIGHT: scanf("%d", &input_password);
+
+* Format Specifiers:
+  - Use "%d" for integers (numbers like 999 or 1234).
+  - Make sure the "%d" is wrapped inside double quotes.
+
+2. IF/ELSE NESTED LOGIC FLOW:
+----------------------------------------------------------------------
+* Step 1: The outer 'if' checks the User ID.
+* Step 2: Only if the User ID is correct, the inner 'if' checks the password.
+* Step 3: Each 'if' and 'else' block opens with '{' and closes with '}'.
+* Semicolon Reminder: Never put a semicolon (;) right after the 'if' condition lines!
+
+3. COMPILING & TESTING:
+----------------------------------------------------------------------
+* Use 'gcc auth_system.c -o auth_system' to compile.
+* Run with './auth_system' and try entering the WRONG password first to see 
+  if your security alert triggers correctly!
+
+======================================================================
+               INTERACTIVE SECURITY ALGORITHMS SECURED!
+======================================================================
